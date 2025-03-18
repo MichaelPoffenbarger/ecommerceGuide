@@ -1,0 +1,3657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complete E-Commerce Development Guide</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Prism CSS for code highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css" rel="stylesheet" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shopping-cart me-2"></i>
+                E-Commerce Guide
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planning">Planning</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#frontend">Frontend</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#backend">Backend</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cart">Cart & Checkout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#payment">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#security">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#optimization">Optimization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#analytics">Analytics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-4 fw-bold mb-3">The Complete E-Commerce Development Guide</h1>
+                    <p class="lead mb-4">Learn everything about planning, building, securing, and optimizing successful e-commerce websites</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#planning" class="btn btn-light btn-lg px-4">Get Started</a>
+                        <a href="#examples" class="btn btn-outline-light btn-lg px-4">See Examples</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <!-- Table of Contents -->
+        <section class="mb-5">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title h4 mb-3">Table of Contents</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#planning" class="text-decoration-none">
+                                        <i class="fas fa-sitemap me-2 text-primary"></i>Planning & Architecture
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#frontend" class="text-decoration-none">
+                                        <i class="fas fa-laptop-code me-2 text-primary"></i>Frontend Development
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#backend" class="text-decoration-none">
+                                        <i class="fas fa-server me-2 text-primary"></i>Backend Implementation
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#products" class="text-decoration-none">
+                                        <i class="fas fa-box-open me-2 text-primary"></i>Product Management
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#cart" class="text-decoration-none">
+                                        <i class="fas fa-shopping-cart me-2 text-primary"></i>Cart & Checkout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#payment" class="text-decoration-none">
+                                        <i class="fas fa-credit-card me-2 text-primary"></i>Payment Integration
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#security" class="text-decoration-none">
+                                        <i class="fas fa-shield-alt me-2 text-primary"></i>Security Considerations
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#optimization" class="text-decoration-none">
+                                        <i class="fas fa-tachometer-alt me-2 text-primary"></i>Performance Optimization
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#analytics" class="text-decoration-none">
+                                        <i class="fas fa-chart-line me-2 text-primary"></i>Analytics & Reporting
+                                    </a>
+                                </li>
+                                <li class="list-group-item border-0 ps-0">
+                                    <a href="#launch" class="text-decoration-none">
+                                        <i class="fas fa-rocket me-2 text-primary"></i>Launch & Maintenance
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planning & Architecture Section -->
+        <section id="planning" class="mb-5 pt-4">
+            <h2 class="display-6 mb-4">Planning & Architecture</h2>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">E-Commerce Business Requirements</h3>
+                    <p>Before diving into development, it's crucial to understand the business requirements that will drive your e-commerce implementation.</p>
+                    
+                    <div class="row align-items-center mt-4">
+                        <div class="col-md-6">
+                            <h4 class="h6">Key Questions to Address:</h4>
+                            <ul>
+                                <li><strong>Target Market:</strong> Who are the customers?</li>
+                                <li><strong>Product Types:</strong> Physical goods, digital products, or services?</li>
+                                <li><strong>Scalability Needs:</strong> Expected traffic and growth?</li>
+                                <li><strong>Geographic Scope:</strong> Local, national, or international?</li>
+                                <li><strong>Shipping & Fulfillment:</strong> How will orders be fulfilled?</li>
+                                <li><strong>Payment Methods:</strong> Which payment options to support?</li>
+                                <li><strong>Legal Requirements:</strong> Tax, privacy, terms of service?</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="interactive-checklist p-4 bg-light rounded">
+                                <h5 class="h6 mb-3">E-Commerce Requirements Checklist</h5>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="req1">
+                                    <label class="form-check-label" for="req1">Define target customer segments</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="req2">
+                                    <label class="form-check-label" for="req2">List all product types and categories</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="req3">
+                                    <label class="form-check-label" for="req3">Document inventory management needs</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="req4">
+                                    <label class="form-check-label" for="req4">Define shipping regions and methods</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="req5">
+                                    <label class="form-check-label" for="req5">Select payment processors to support</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="req6">
+                                    <label class="form-check-label" for="req6">Document tax collection requirements</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="req7">
+                                    <label class="form-check-label" for="req7">List integration needs (ERP, CRM, etc.)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Technical Architecture</h3>
+                    <p>A robust architecture is the foundation of a successful e-commerce platform. Here are the key components to consider.</p>
+                    
+                    <div class="architecture-diagram mb-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card border-primary p-3 text-center mb-3">
+                                    <h5>E-Commerce Architecture</h5>
+                                    <div class="p-3">
+                                        <img src="https://via.placeholder.com/800x400?text=E-Commerce+Architecture+Diagram" class="img-fluid" alt="E-Commerce Architecture Diagram">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Frontend Layer</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="small mb-0">
+                                        <li>User interface (HTML, CSS, JavaScript)</li>
+                                        <li>Responsive design for mobile</li>
+                                        <li>Product catalog display</li>
+                                        <li>Shopping cart implementation</li>
+                                        <li>Checkout process</li>
+                                        <li>User account management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Backend Layer</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="small mb-0">
+                                        <li>Application server</li>
+                                        <li>Business logic</li>
+                                        <li>Authentication & authorization</li>
+                                        <li>API endpoints</li>
+                                        <li>Payment processing</li>
+                                        <li>Order management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Data Layer</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="small mb-0">
+                                        <li>Database (products, customers, orders)</li>
+                                        <li>Product media storage</li>
+                                        <li>Caching layer</li>
+                                        <li>Search indexing</li>
+                                        <li>Analytics data storage</li>
+                                        <li>Backup systems</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-4 bg-light rounded">
+                        <h4 class="h6">Architecture Decision Factors:</h4>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="archType" id="archTypeMonolith" checked>
+                                    <label class="form-check-label" for="archTypeMonolith">Monolithic</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="archType" id="archTypeMicroservice">
+                                    <label class="form-check-label" for="archTypeMicroservice">Microservices</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="hostingType" id="hostingTypeCloud" checked>
+                                    <label class="form-check-label" for="hostingTypeCloud">Cloud-based</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="hostingType" id="hostingTypeOnPrem">
+                                    <label class="form-check-label" for="hostingTypeOnPrem">On-premises</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="architectureDescription" class="mt-3">
+                            <div class="alert alert-info">
+                                <strong>Monolithic Cloud-based Architecture:</strong> A single codebase running in the cloud. Good for startups and smaller e-commerce sites due to simplicity and lower initial costs. Examples include Shopify and traditional WooCommerce stores.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Technology Stack Selection</h3>
+                    <p>Choosing the right technology stack is crucial for your e-commerce platform's success. Here are some common options:</p>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Options</th>
+                                    <th>Considerations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Frontend</strong></td>
+                                    <td>
+                                        <span class="badge bg-primary me-1">HTML5</span>
+                                        <span class="badge bg-primary me-1">CSS3/SASS</span>
+                                        <span class="badge bg-primary me-1">JavaScript</span>
+                                        <span class="badge bg-primary me-1">React</span>
+                                        <span class="badge bg-primary me-1">Vue.js</span>
+                                        <span class="badge bg-primary">Angular</span>
+                                    </td>
+                                    <td>Browser compatibility, performance, developer expertise</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Backend</strong></td>
+                                    <td>
+                                        <span class="badge bg-success me-1">Node.js</span>
+                                        <span class="badge bg-success me-1">PHP</span>
+                                        <span class="badge bg-success me-1">Python</span>
+                                        <span class="badge bg-success me-1">Ruby</span>
+                                        <span class="badge bg-success me-1">Java</span>
+                                        <span class="badge bg-success">.NET</span>
+                                    </td>
+                                    <td>Scalability, community support, performance</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Database</strong></td>
+                                    <td>
+                                        <span class="badge bg-warning text-dark me-1">MySQL</span>
+                                        <span class="badge bg-warning text-dark me-1">PostgreSQL</span>
+                                        <span class="badge bg-warning text-dark me-1">MongoDB</span>
+                                        <span class="badge bg-warning text-dark">Redis</span>
+                                    </td>
+                                    <td>Data structure, scalability, query complexity</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>E-commerce Platforms</strong></td>
+                                    <td>
+                                        <span class="badge bg-info text-dark me-1">Magento</span>
+                                        <span class="badge bg-info text-dark me-1">WooCommerce</span>
+                                        <span class="badge bg-info text-dark me-1">Shopify</span>
+                                        <span class="badge bg-info text-dark">BigCommerce</span>
+                                    </td>
+                                    <td>Customization needs, budget, time-to-market</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Deployment</strong></td>
+                                    <td>
+                                        <span class="badge bg-secondary me-1">AWS</span>
+                                        <span class="badge bg-secondary me-1">Google Cloud</span>
+                                        <span class="badge bg-secondary me-1">Azure</span>
+                                        <span class="badge bg-secondary">Digital Ocean</span>
+                                    </td>
+                                    <td>Budget, scaling needs, geographical distribution</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-4 bg-light p-4 rounded">
+                        <h4 class="h6 mb-3">Interactive Stack Builder</h4>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="frontendStack" class="form-label">Frontend</label>
+                                <select id="frontendStack" class="form-select">
+                                    <option value="html-jquery-bootstrap">HTML + jQuery + Bootstrap</option>
+                                    <option value="react">React</option>
+                                    <option value="vue">Vue.js</option>
+                                    <option value="angular">Angular</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="backendStack" class="form-label">Backend</label>
+                                <select id="backendStack" class="form-select">
+                                    <option value="nodejs">Node.js (Express)</option>
+                                    <option value="php">PHP (Laravel)</option>
+                                    <option value="python">Python (Django)</option>
+                                    <option value="ruby">Ruby on Rails</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="databaseStack" class="form-label">Database</label>
+                                <select id="databaseStack" class="form-select">
+                                    <option value="mysql">MySQL</option>
+                                    <option value="postgresql">PostgreSQL</option>
+                                    <option value="mongodb">MongoDB</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="stackRecommendation" class="mt-3">
+                            <div class="alert alert-success">
+                                <strong>Recommended Stack:</strong> HTML + jQuery + Bootstrap frontend with Node.js (Express) backend and MySQL database is an excellent choice for e-commerce sites. This stack offers good performance, ease of development, and extensive community support for e-commerce features.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frontend Development Section -->
+        <section id="frontend" class="mb-5 pt-4">
+            <h2 class="display-6 mb-4">Frontend Development</h2>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Responsive Design Essentials</h3>
+                    <p>E-commerce sites must perform flawlessly across all devices, particularly mobile, where an increasing share of online shopping takes place.</p>
+                    
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h4 class="h6 mb-3">Key Responsive Design Principles:</h4>
+                            <ul>
+                                <li><strong>Mobile-First Approach:</strong> Design for mobile, then enhance for larger screens</li>
+                                <li><strong>Fluid Grids:</strong> Use relative units (%, rem) instead of fixed pixels</li>
+                                <li><strong>Flexible Images:</strong> Ensure images scale properly across devices</li>
+                                <li><strong>Media Queries:</strong> Apply different styles based on device characteristics</li>
+                                <li><strong>Touch-Friendly:</strong> Larger tap targets for mobile users (min 44px)</li>
+                                <li><strong>Performance Focus:</strong> Optimize for speed on mobile networks</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="device-preview bg-light p-3 rounded text-center">
+                                <div class="btn-group mb-3" role="group">
+                                    <button type="button" class="btn btn-outline-primary active" id="desktopView"><i class="fas fa-desktop"></i></button>
+                                    <button type="button" class="btn btn-outline-primary" id="tabletView"><i class="fas fa-tablet-alt"></i></button>
+                                    <button type="button" class="btn btn-outline-primary" id="mobileView"><i class="fas fa-mobile-alt"></i></button>
+                                </div>
+                                <div class="preview-container">
+                                    <div id="deviceFrame" class="desktop-frame">
+                                        <img src="https://via.placeholder.com/800x600?text=E-Commerce+Responsive+Design" class="img-fluid" alt="Responsive Design Example">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="code-example mt-4">
+                        <h4 class="h6 mb-2">Responsive CSS Example:</h4>
+                        <div class="code-block">
+<pre><code class="language-css">/* Base styles for all devices */
+.product-grid {
+  display: grid;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Mobile first - single column by default */
+.product-card {
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="alert alert-info">
+                            <strong><i class="fas fa-lightbulb me-2"></i>Pro Tip:</strong> Use Bootstrap's responsive grid system and utility classes to rapidly build responsive e-commerce interfaces without writing extensive custom CSS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Product Catalog Design</h3>
+                    <p>A well-designed product catalog helps customers find items quickly and encourages purchases.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Product Grid Implementation</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="small">The product grid is the main component for browsing products. It should be visually appealing and performant.</p>
+                                    
+                                    <div class="code-block">
+<pre><code class="language-html">&lt;!-- Product Grid with Bootstrap -->
+&lt;div class="container">
+  &lt;div class="row">
+    &lt;!-- Product Card -->
+    &lt;div class="col-6 col-md-4 col-lg-3 mb-4">
+      &lt;div class="card product-card h-100">
+        &lt;div class="badge bg-danger position-absolute top-0 end-0 m-2">Sale&lt;/div>
+        &lt;img src="product1.jpg" class="card-img-top" alt="Product Name">
+        &lt;div class="card-body">
+          &lt;h5 class="card-title">Product Name&lt;/h5>
+          &lt;div class="d-flex justify-content-between align-items-center">
+            &lt;div>
+              &lt;span class="text-muted text-decoration-line-through">$99.99&lt;/span>
+              &lt;span class="text-danger fw-bold">$79.99&lt;/span>
+            &lt;/div>
+            &lt;div class="rating">
+              &lt;i class="fas fa-star text-warning">&lt;/i>
+              &lt;i class="fas fa-star text-warning">&lt;/i>
+              &lt;i class="fas fa-star text-warning">&lt;/i>
+              &lt;i class="fas fa-star text-warning">&lt;/i>
+              &lt;i class="fas fa-star-half-alt text-warning">&lt;/i>
+              &lt;span class="small">(4.5)&lt;/span>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="card-footer bg-transparent border-top-0">
+          &lt;button class="btn btn-primary w-100 add-to-cart">Add to Cart&lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+    &lt;!-- Repeat for more products -->
+  &lt;/div>
+&lt;/div></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Product Filtering & Sorting</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="small">Effective filtering and sorting options help customers narrow down products based on their preferences.</p>
+                                    
+                                    <div class="code-block">
+<pre><code class="language-html">&lt;!-- Product Filtering -->
+&lt;div class="row mb-4">
+  &lt;div class="col-md-3">
+    &lt;h5>Filters&lt;/h5>
+    &lt;div class="card">
+      &lt;div class="card-body">
+        &lt;h6>Price Range&lt;/h6>
+        &lt;div class="range-slider mb-3">
+          &lt;input type="range" class="form-range" id="priceRange" min="0" max="1000" step="10">
+          &lt;div class="d-flex justify-content-between">
+            &lt;span>$0&lt;/span>
+            &lt;span id="priceValue">$500&lt;/span>
+            &lt;span>$1000&lt;/span>
+          &lt;/div>
+        &lt;/div>
+        
+        &lt;h6>Categories&lt;/h6>
+        &lt;div class="form-check">
+          &lt;input class="form-check-input" type="checkbox" id="category1">
+          &lt;label class="form-check-label" for="category1">Electronics&lt;/label>
+        &lt;/div>
+        &lt;div class="form-check">
+          &lt;input class="form-check-input" type="checkbox" id="category2">
+          &lt;label class="form-check-label" for="category2">Clothing&lt;/label>
+        &lt;/div>
+        &lt;div class="form-check">
+          &lt;input class="form-check-input" type="checkbox" id="category3">
+          &lt;label class="form-check-label" for="category3">Home & Kitchen&lt;/label>
+        &lt;/div>
+        
+        &lt;h6>Rating&lt;/h6>
+        &lt;div class="form-check">
+          &lt;input class="form-check-input" type="radio" name="rating" id="rating4">
+          &lt;label class="form-check-label" for="rating4">4★ & above&lt;/label>
+        &lt;/div>
+        &lt;div class="form-check">
+          &lt;input class="form-check-input" type="radio" name="rating" id="rating3">
+          &lt;label class="form-check-label" for="rating3">3★ & above&lt;/label>
+        &lt;/div>
+        
+        &lt;button class="btn btn-primary mt-3">Apply Filters&lt;/button>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  
+  &lt;div class="col-md-9">
+    &lt;div class="d-flex justify-content-between align-items-center mb-3">
+      &lt;p class="mb-0">Showing 24 of 156 products&lt;/p>
+      &lt;div class="d-flex">
+        &lt;select class="form-select me-2">
+          &lt;option>Sort by: Featured&lt;/option>
+          &lt;option>Price: Low to High&lt;/option>
+          &lt;option>Price: High to Low&lt;/option>
+          &lt;option>Customer Rating&lt;/option>
+          &lt;option>Newest Arrivals&lt;/option>
+        &lt;/select>
+        &lt;div class="btn-group" role="group">
+          &lt;button type="button" class="btn btn-outline-secondary">
+            &lt;i class="fas fa-th-large">&lt;/i>
+          &lt;/button>
+          &lt;button type="button" class="btn btn-outline-secondary">
+            &lt;i class="fas fa-list">&lt;/i>
+          &lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+    
+    &lt;!-- Product grid goes here -->
+  &lt;/div>
+&lt;/div></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="h6 mb-3">Interactive Product Card Example:</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card product-card h-100">
+                                    <div class="badge bg-danger position-absolute top-0 end-0 m-2">Sale</div>
+                                    <img src="https://via.placeholder.com/300x300?text=Product+Image" class="card-img-top p-3" alt="Product Name">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Wireless Headphones</h5>
+                                        <p class="card-text small">Premium noise-canceling headphones with 30-hour battery life and comfortable ear cups.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="text-muted text-decoration-line-through">$199.99</span>
+                                                <span class="text-danger fw-bold">$149.99</span>
+                                            </div>
+                                            <div class="rating">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star-half-alt text-warning"></i>
+                                                <span class="small">(4.5)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0">
+                                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Product Card Best Practices</h5>
+                                        <ul>
+                                            <li><strong>Clear Pricing:</strong> Show original and sale prices clearly differentiated</li>
+                                            <li><strong>High-Quality Images:</strong> Use multiple angles and zoom functionality</li>
+                                            <li><strong>Prominent CTA:</strong> Make "Add to Cart" button stand out</li>
+                                            <li><strong>Social Proof:</strong> Display ratings and review counts</li>
+                                            <li><strong>Quick Information:</strong> Show key specs without requiring clicks</li>
+                                            <li><strong>Availability:</strong> Indicate if product is in stock or low inventory</li>
+                                            <li><strong>Wishlist Option:</strong> Allow saving for later in addition to cart</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">User Experience Optimization</h3>
+                    <p>A streamlined UX is critical for reducing friction in the shopping journey and improving conversion rates.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card border-0 bg-light h-100">
+                                <div class="card-body">
+                                    <h4 class="h6 mb-3">Search Functionality</h4>
+                                    <p class="small">An effective search function is essential for e-commerce sites. Consider these implementations:</p>
+                                    <ul class="small mb-0">
+                                        <li><strong>Predictive Search:</strong> Show suggestions as users type</li>
+                                        <li><strong>Faceted Search:</strong> Allow filtering search results</li>
+                                        <li><strong>Typo Tolerance:</strong> Support for misspellings</li>
+                                        <li><strong>Zero Results Handling:</strong> Show alternatives</li>
+                                    </ul>
+                                    
+                                    <div class="mt-3">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search products..." aria-label="Search products">
+                                            <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                                        </div>
+                                        <div class="search-preview mt-2" style="display: none;">
+                                            <div class="list-group shadow-sm">
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://via.placeholder.com/50" class="me-3" alt="Product">
+                                                        <div>
+                                                            <h6 class="mb-0">Wireless Headphones</h6>
+                                                            <small class="text-muted">Electronics</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://via.placeholder.com/50" class="me-3" alt="Product">
+                                                        <div>
+                                                            <h6 class="mb-0">Bluetooth Speaker</h6>
+                                                            <small class="text-muted">Electronics</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://via.placeholder.com/50" class="me-3" alt="Product">
+                                                        <div>
+                                                            <h6 class="mb-0">Wireless Charger</h6>
+                                                            <small class="text-muted">Accessories</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-0 bg-light h-100">
+                                <div class="card-body">
+                                    <h4 class="h6 mb-3">Navigation Patterns</h4>
+                                    <p class="small">Effective navigation helps customers discover products and find their way around your store.</p>
+                                    <ul class="small mb-0">
+                                        <li><strong>Mega Menus:</strong> For stores with many categories</li>
+                                        <li><strong>Breadcrumbs:</strong> Show the path and allow easy navigation back</li>
+                                        <li><strong>Recently Viewed:</strong> Help users return to items of interest</li>
+                                        <li><strong>Sticky Headers:</strong> Keep navigation accessible while scrolling</li>
+                                    </ul>
+                                    
+                                    <div class="nav-example mt-3">
+                                        <nav class="navbar navbar-expand navbar-light bg-white p-0 mb-3">
+                                            <div class="container-fluid p-0">
+                                                <div class="collapse navbar-collapse">
+                                                    <ul class="navbar-nav">
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                                                Electronics
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                                                Clothing
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                                                Home
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#">Sale</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb small bg-white p-2 rounded">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Electronics</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Audio</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Headphones</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="h6 mb-3">User Journey Optimization:</h4>
+                        <div class="journey-steps">
+                            <div class="row text-center g-0">
+                                <div class="col">
+                                    <div class="journey-step">
+                                        <div class="step-icon mb-2">
+                                            <i class="fas fa-search fa-2x text-primary"></i>
+                                        </div>
+                                        <h6>Discovery</h6>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="step-connector"></div>
+                                </div>
+                                <div class="col">
+                                    <div class="journey-step">
+                                        <div class="step-icon mb-2">
+                                            <i class="fas fa-info-circle fa-2x text-primary"></i>
+                                        </div>
+                                        <h6>Research</h6>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="step-connector"></div>
+                                </div>
+                                <div class="col">
+                                    <div class="journey-step">
+                                        <div class="step-icon mb-2">
+                                            <i class="fas fa-shopping-cart fa-2x text-primary"></i>
+                                        </div>
+                                        <h6>Purchase</h6>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="step-connector"></div>
+                                </div>
+                                <div class="col">
+                                    <div class="journey-step">
+                                        <div class="step-icon mb-2">
+                                            <i class="fas fa-truck fa-2x text-primary"></i>
+                                        </div>
+                                        <h6>Fulfillment</h6>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="step-connector"></div>
+                                </div>
+                                <div class="col">
+                                    <div class="journey-step">
+                                        <div class="step-icon mb-2">
+                                            <i class="fas fa-star fa-2x text-primary"></i>
+                                        </div>
+                                        <h6>Retention</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-sm table-bordered mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Journey Stage</th>
+                                                <th>UX Considerations</th>
+                                                <th>Implementation Tips</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Discovery</strong></td>
+                                                <td>Search, navigation, homepage layout</td>
+                                                <td>Feature bestsellers, trending items; optimize search with autocomplete</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Research</strong></td>
+                                                <td>Product pages, reviews, comparisons</td>
+                                                <td>Detailed product info, high-quality images, verified reviews</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Purchase</strong></td>
+                                                <td>Cart, checkout, payment</td>
+                                                <td>Minimize form fields, offer guest checkout, clear CTAs</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Fulfillment</strong></td>
+                                                <td>Order confirmation, tracking</td>
+                                                <td>Clear order summaries, real-time shipping updates</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Retention</strong></td>
+                                                <td>Account management, reordering</td>
+                                                <td>Easy reordering, personalized recommendations</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backend Implementation Section -->
+        <section id="backend" class="mb-5 pt-4">
+            <h2 class="display-6 mb-4">Backend Implementation</h2>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Database Design</h3>
+                    <p>A well-structured database is crucial for e-commerce performance and scalability.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Core Database Tables</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Table</th>
+                                                    <th>Purpose</th>
+                                                    <th>Key Fields</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>products</code></td>
+                                                    <td>Store product information</td>
+                                                    <td><code>id, name, description, price, stock</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>categories</code></td>
+                                                    <td>Organize products</td>
+                                                    <td><code>id, name, parent_id</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>users</code></td>
+                                                    <td>Store customer information</td>
+                                                    <td><code>id, name, email, password, address</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>orders</code></td>
+                                                    <td>Track customer orders</td>
+                                                    <td><code>id, user_id, total, status, date</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>order_items</code></td>
+                                                    <td>Items within orders</td>
+                                                    <td><code>id, order_id, product_id, quantity, price</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>reviews</code></td>
+                                                    <td>Product reviews and ratings</td>
+                                                    <td><code>id, product_id, user_id, rating, comment</code></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Database Relationships</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="db-diagram text-center mb-3">
+                                        <img src="https://via.placeholder.com/500x300?text=Database+Schema+Diagram" class="img-fluid rounded" alt="Database Schema Diagram">
+                                    </div>
+                                    <h5 class="h6">Key Relationships:</h5>
+                                    <ul class="small">
+                                        <li><strong>One-to-Many:</strong> A category has many products</li>
+                                        <li><strong>One-to-Many:</strong> A user has many orders</li>
+                                        <li><strong>One-to-Many:</strong> An order has many order items</li>
+                                        <li><strong>Many-to-Many:</strong> Products can belong to multiple categories (using junction table)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="h6 mb-3">SQL Schema Example:</h4>
+                        <div class="code-block">
+<pre><code class="language-sql">-- Products Table
+CREATE TABLE products (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2) NOT NULL,
+  compare_price DECIMAL(10, 2),
+  cost DECIMAL(10, 2),
+  sku VARCHAR(100) UNIQUE,
+  barcode VARCHAR(100),
+  weight DECIMAL(8, 2),
+  stock_quantity INT NOT NULL DEFAULT 0,
+  low_stock_threshold INT DEFAULT 5,
+  status ENUM('active', 'draft', 'archived') DEFAULT 'draft',
+  featured BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Categories Table
+CREATE TABLE categories (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  slug VARCHAR(255) NOT NULL UNIQUE,
+  description TEXT,
+  parent_id INT,
+  FOREIGN KEY (parent_id) REFERENCES categories(id) ON DELETE SET NULL
+);
+
+-- Product Categories (Many-to-Many)
+CREATE TABLE product_categories (
+  product_id INT,
+  category_id INT,
+  PRIMARY KEY (product_id, category_id),
+  FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE,
+  FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
+);
+
+-- Orders Table
+CREATE TABLE orders (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT,
+  status ENUM('pending', 'processing', 'shipped', 'delivered', 'cancelled') DEFAULT 'pending',
+  total DECIMAL(10, 2) NOT NULL,
+  subtotal DECIMAL(10, 2) NOT NULL,
+  tax DECIMAL(10, 2) NOT NULL,
+  shipping DECIMAL(10, 2) NOT NULL,
+  discount DECIMAL(10, 2) DEFAULT 0,
+  shipping_address JSON,
+  billing_address JSON,
+  payment_method VARCHAR(50),
+  notes TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+);
+
+-- Order Items Table
+CREATE TABLE order_items (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  order_id INT NOT NULL,
+  product_id INT NOT NULL,
+  quantity INT NOT NULL,
+  price DECIMAL(10, 2) NOT NULL,
+  FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
+  FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="alert alert-info">
+                            <strong><i class="fas fa-lightbulb me-2"></i>Database Optimization Tips:</strong>
+                            <ul class="mb-0 mt-2">
+                                <li>Use appropriate indexes on frequently queried columns</li>
+                                <li>Consider database sharding for very large product catalogs</li>
+                                <li>Implement caching for product and category data</li>
+                                <li>Use database transactions for order processing</li>
+                                <li>Regularly backup your database and test recovery procedures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">API Development</h3>
+                    <p>A well-designed API architecture is essential for building a flexible and scalable e-commerce platform.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">RESTful API Endpoints</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Endpoint</th>
+                                                    <th>Method</th>
+                                                    <th>Purpose</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>/api/products</code></td>
+                                                    <td><span class="badge bg-success">GET</span></td>
+                                                    <td>Get all products with pagination</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>/api/products/:id</code></td>
+                                                    <td><span class="badge bg-success">GET</span></td>
+                                                    <td>Get a specific product</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>/api/categories</code></td>
+                                                    <td><span class="badge bg-success">GET</span></td>
+                                                    <td>Get all categories</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>/api/categories/:id/products</code></td>
+                                                    <td><span class="badge bg-success">GET</span></td>
+                                                    <td>Get products in a category</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>/api/cart</code></td>
+                                                    <td><span class="badge bg-success">GET</span></td>
+                                                    <td>Get cart contents</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>/api/cart</code></td>
+                                                    <td><span class="badge bg-primary">POST</span></td>
+                                                    <td>Add item to cart</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>/api/orders</code></td>
+                                                    <td><span class="badge bg-primary">POST</span></td>
+                                                    <td>Create a new order</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>/api/orders/:id</code></td>
+                                                    <td><span class="badge bg-success">GET</span></td>
+                                                    <td>Get a specific order</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">API Implementation with Express.js</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="code-block">
+<pre><code class="language-javascript">// api/products.js - Example Express.js API routes for products
+const express = require('express');
+const router = express.Router();
+const pool = require('../database');
+const { authenticate } = require('../middleware/auth');
+
+// Get all products with pagination
+router.get('/', async (req, res) => {
+  try {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const offset = (page - 1) * limit;
+    const category = req.query.category;
+    
+    let query = 'SELECT * FROM products WHERE status = "active"';
+    let countQuery = 'SELECT COUNT(*) as count FROM products WHERE status = "active"';
+    
+    // Add category filter if provided
+    if (category) {
+      query += ` AND id IN (SELECT product_id FROM product_categories WHERE category_id = ?)`;
+      countQuery += ` AND id IN (SELECT product_id FROM product_categories WHERE category_id = ?)`;
+    }
+    
+    // Add sorting
+    const sortBy = req.query.sort_by || 'created_at';
+    const sortOrder = req.query.sort_order === 'asc' ? 'ASC' : 'DESC';
+    query += ` ORDER BY ${sortBy} ${sortOrder}`;
+    
+    // Add pagination
+    query += ' LIMIT ? OFFSET ?';
+    
+    // Execute query
+    const [products] = await pool.query(
+      query, 
+      category ? [category, limit, offset] : [limit, offset]
+    );
+    
+    // Get total count for pagination
+    const [countResult] = await pool.query(
+      countQuery,
+      category ? [category] : []
+    );
+    const totalProducts = countResult[0].count;
+    
+    res.json({
+      data: products,
+      meta: {
+        total: totalProducts,
+        page,
+        limit,
+        totalPages: Math.ceil(totalProducts / limit)
+      }
+    });
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    res.status(500).json({ error: 'Failed to fetch products' });
+  }
+});
+
+// Get a specific product by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const [products] = await pool.query(
+      'SELECT * FROM products WHERE id = ?',
+      [req.params.id]
+    );
+    
+    if (products.length === 0) {
+      return res.status(404).json({ error: 'Product not found' });
+    }
+    
+    // Get product categories
+    const [categories] = await pool.query(
+      `SELECT c.id, c.name FROM categories c
+       INNER JOIN product_categories pc ON c.id = pc.category_id
+       WHERE pc.product_id = ?`,
+      [req.params.id]
+    );
+    
+    // Get product reviews
+    const [reviews] = await pool.query(
+      `SELECT r.*, u.name as user_name FROM reviews r
+       LEFT JOIN users u ON r.user_id = u.id
+       WHERE r.product_id = ?
+       ORDER BY r.created_at DESC`,
+      [req.params.id]
+    );
+    
+    const product = {
+      ...products[0],
+      categories,
+      reviews
+    };
+    
+    res.json(product);
+  } catch (error) {
+    console.error('Error fetching product:', error);
+    res.status(500).json({ error: 'Failed to fetch product' });
+  }
+});
+
+// Create a new product (admin only)
+router.post('/', authenticate, async (req, res) => {
+  // Check if user is admin
+  if (req.user.role !== 'admin') {
+    return res.status(403).json({ error: 'Unauthorized' });
+  }
+  
+  try {
+    const {
+      name, description, price, compare_price, cost,
+      sku, barcode, weight, stock_quantity,
+      low_stock_threshold, status, featured, 
+      categories
+    } = req.body;
+    
+    // Validate required fields
+    if (!name || !price) {
+      return res.status(400).json({ error: 'Name and price are required' });
+    }
+    
+    // Insert product using transaction
+    const connection = await pool.getConnection();
+    await connection.beginTransaction();
+    
+    try {
+      // Insert product
+      const [result] = await connection.query(
+        `INSERT INTO products (
+          name, description, price, compare_price, cost,
+          sku, barcode, weight, stock_quantity,
+          low_stock_threshold, status, featured
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [
+          name, description, price, compare_price, cost,
+          sku, barcode, weight, stock_quantity,
+          low_stock_threshold, status, featured
+        ]
+      );
+      
+      const productId = result.insertId;
+      
+      // Insert product categories if provided
+      if (categories && categories.length > 0) {
+        const categoryValues = categories.map(
+          categoryId => [productId, categoryId]
+        );
+        
+        await connection.query(
+          `INSERT INTO product_categories (product_id, category_id) VALUES ?`,
+          [categoryValues]
+        );
+      }
+      
+      await connection.commit();
+      
+      res.status(201).json({
+        id: productId,
+        message: 'Product created successfully'
+      });
+    } catch (error) {
+      await connection.rollback();
+      throw error;
+    } finally {
+      connection.release();
+    }
+  } catch (error) {
+    console.error('Error creating product:', error);
+    res.status(500).json({ error: 'Failed to create product' });
+  }
+});
+
+module.exports = router;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="h6 mb-3">API Best Practices:</h4>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card border-0 bg-light">
+                                    <div class="card-body">
+                                        <h5 class="h6">Design Principles</h5>
+                                        <ul class="small mb-0">
+                                            <li><strong>Consistent Naming:</strong> Use plural nouns for resources</li>
+                                            <li><strong>Versioning:</strong> Include API version in the URL</li>
+                                            <li><strong>Pagination:</strong> Implement for large collections</li>
+                                            <li><strong>Filtering:</strong> Allow clients to filter results</li>
+                                            <li><strong>Proper Status Codes:</strong> Use appropriate HTTP status codes</li>
+                                            <li><strong>HATEOAS:</strong> Include links to related resources</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 bg-light">
+                                    <div class="card-body">
+                                        <h5 class="h6">Performance & Security</h5>
+                                        <ul class="small mb-0">
+                                            <li><strong>Rate Limiting:</strong> Prevent abuse and DoS attacks</li>
+                                            <li><strong>Caching:</strong> Use HTTP caching headers</li>
+                                            <li><strong>Compression:</strong> Enable GZIP/Brotli compression</li>
+                                            <li><strong>Input Validation:</strong> Validate all client inputs</li>
+                                            <li><strong>Authentication:</strong> Use JWT or OAuth2</li>
+                                            <li><strong>HTTPS:</strong> Encrypt all API traffic</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Authentication & User Management</h3>
+                    <p>Implementing secure authentication is critical for e-commerce platforms to protect user data and manage access to resources.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Authentication Implementation</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="code-block">
+<pre><code class="language-javascript">// auth.js - Authentication routes and middleware
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const pool = require('../database');
+
+// Register a new user
+router.post('/register', async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+    
+    // Validate input
+    if (!name || !email || !password) {
+      return res.status(400).json({ error: 'All fields are required' });
+    }
+    
+    // Check if email already exists
+    const [users] = await pool.query(
+      'SELECT id FROM users WHERE email = ?', 
+      [email]
+    );
+    
+    if (users.length > 0) {
+      return res.status(400).json({ error: 'Email already in use' });
+    }
+    
+    // Hash password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+    
+    // Insert user
+    const [result] = await pool.query(
+      'INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)',
+      [name, email, hashedPassword, 'customer']
+    );
+    
+    // Generate JWT token
+    const token = jwt.sign(
+      { id: result.insertId, email, role: 'customer' },
+      process.env.JWT_SECRET,
+      { expiresIn: '1h' }
+    );
+    
+    res.status(201).json({
+      message: 'Registration successful',
+      token,
+      user: {
+        id: result.insertId,
+        name,
+        email,
+        role: 'customer'
+      }
+    });
+  } catch (error) {
+    console.error('Registration error:', error);
+    res.status(500).json({ error: 'Registration failed' });
+  }
+});
+
+// Login
+router.post('/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    
+    // Validate input
+    if (!email || !password) {
+      return res.status(400).json({ error: 'Email and password are required' });
+    }
+    
+    // Find user
+    const [users] = await pool.query(
+      'SELECT id, name, email, password, role FROM users WHERE email = ?',
+      [email]
+    );
+    
+    if (users.length === 0) {
+      return res.status(400).json({ error: 'Invalid credentials' });
+    }
+    
+    const user = users[0];
+    
+    // Check password
+    const isMatch = await bcrypt.compare(password, user.password);
+    
+    if (!isMatch) {
+      return res.status(400).json({ error: 'Invalid credentials' });
+    }
+    
+    // Generate JWT token
+    const token = jwt.sign(
+      { id: user.id, email: user.email, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: '1h' }
+    );
+    
+    res.json({
+      message: 'Login successful',
+      token,
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role
+      }
+    });
+  } catch (error) {
+    console.error('Login error:', error);
+    res.status(500).json({ error: 'Login failed' });
+  }
+});
+
+// Authentication middleware
+const authenticate = (req, res, next) => {
+  // Get token from header
+  const token = req.header('Authorization')?.split(' ')[1];
+  
+  if (!token) {
+    return res.status(401).json({ error: 'No token, authorization denied' });
+  }
+  
+  try {
+    // Verify token
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    
+    // Add user to request
+    req.user = decoded;
+    next();
+  } catch (error) {
+    console.error('Token verification error:', error);
+    res.status(401).json({ error: 'Token is not valid' });
+  }
+};
+
+module.exports = { router, authenticate };</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">User Profile Management</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="code-block">
+<pre><code class="language-javascript">// users.js - User profile management routes
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcrypt');
+const pool = require('../database');
+const { authenticate } = require('../middleware/auth');
+
+// Get current user profile
+router.get('/profile', authenticate, async (req, res) => {
+  try {
+    const [users] = await pool.query(
+      `SELECT id, name, email, phone, role, created_at 
+       FROM users WHERE id = ?`,
+      [req.user.id]
+    );
+    
+    if (users.length === 0) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    
+    // Get user addresses
+    const [addresses] = await pool.query(
+      'SELECT * FROM addresses WHERE user_id = ?',
+      [req.user.id]
+    );
+    
+    // Get user's recent orders
+    const [orders] = await pool.query(
+      `SELECT id, status, total, created_at 
+       FROM orders 
+       WHERE user_id = ? 
+       ORDER BY created_at DESC 
+       LIMIT 5`,
+      [req.user.id]
+    );
+    
+    const user = {
+      ...users[0],
+      addresses,
+      recentOrders: orders
+    };
+    
+    res.json(user);
+  } catch (error) {
+    console.error('Error fetching profile:', error);
+    res.status(500).json({ error: 'Failed to fetch profile' });
+  }
+});
+
+// Update user profile
+router.put('/profile', authenticate, async (req, res) => {
+  try {
+    const { name, email, phone } = req.body;
+    
+    // Validate input
+    if (!name || !email) {
+      return res.status(400).json({ error: 'Name and email are required' });
+    }
+    
+    // Check if email is already taken by another user
+    if (email !== req.user.email) {
+      const [users] = await pool.query(
+        'SELECT id FROM users WHERE email = ? AND id != ?',
+        [email, req.user.id]
+      );
+      
+      if (users.length > 0) {
+        return res.status(400).json({ error: 'Email already in use' });
+      }
+    }
+    
+    // Update user
+    await pool.query(
+      'UPDATE users SET name = ?, email = ?, phone = ? WHERE id = ?',
+      [name, email, phone, req.user.id]
+    );
+    
+    res.json({ message: 'Profile updated successfully' });
+  } catch (error) {
+    console.error('Error updating profile:', error);
+    res.status(500).json({ error: 'Failed to update profile' });
+  }
+});
+
+// Change password
+router.put('/change-password', authenticate, async (req, res) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+    
+    // Validate input
+    if (!currentPassword || !newPassword) {
+      return res.status(400).json({ 
+        error: 'Current password and new password are required' 
+      });
+    }
+    
+    // Get current user with password
+    const [users] = await pool.query(
+      'SELECT password FROM users WHERE id = ?',
+      [req.user.id]
+    );
+    
+    if (users.length === 0) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    
+    // Verify current password
+    const isMatch = await bcrypt.compare(currentPassword, users[0].password);
+    
+    if (!isMatch) {
+      return res.status(400).json({ error: 'Current password is incorrect' });
+    }
+    
+    // Hash new password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(newPassword, salt);
+    
+    // Update password
+    await pool.query(
+      'UPDATE users SET password = ? WHERE id = ?',
+      [hashedPassword, req.user.id]
+    );
+    
+    res.json({ message: 'Password changed successfully' });
+  } catch (error) {
+    console.error('Error changing password:', error);
+    res.status(500).json({ error: 'Failed to change password' });
+  }
+});
+
+module.exports = router;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="h6 mb-3">Authentication Security Best Practices:</h4>
+                        <div class="alert alert-warning">
+                            <strong><i class="fas fa-shield-alt me-2"></i>Security Considerations:</strong>
+                            <ul class="mb-0 mt-2">
+                                <li><strong>Password Storage:</strong> Always hash passwords using strong algorithms (bcrypt, Argon2)</li>
+                                <li><strong>HTTPS:</strong> Ensure all authentication requests are encrypted</li>
+                                <li><strong>JWT Security:</strong> Use strong secrets, short expiry times, and secure storage</li>
+                                <li><strong>CSRF Protection:</strong> Implement Cross-Site Request Forgery protection</li>
+                                <li><strong>Rate Limiting:</strong> Limit login attempts to prevent brute force attacks</li>
+                                <li><strong>2FA:</strong> Consider implementing two-factor authentication for added security</li>
+                                <li><strong>Session Management:</strong> Implement secure session handling with proper timeouts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Management Section -->
+        <section id="products" class="mb-5 pt-4">
+            <h2 class="display-6 mb-4">Product Management</h2>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Product Data Modeling</h3>
+                    <p>Effective product data modeling is crucial for organizing and presenting your inventory to customers.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Product Attributes</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Attribute</th>
+                                                    <th>Description</th>
+                                                    <th>Example</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Basic Info</strong></td>
+                                                    <td>Core product information</td>
+                                                    <td>Name, description, SKU</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Pricing</strong></td>
+                                                    <td>Price related information</td>
+                                                    <td>Regular price, sale price, cost</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Inventory</strong></td>
+                                                    <td>Stock management data</td>
+                                                    <td>Quantity, low stock threshold</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Categorization</strong></td>
+                                                    <td>Product organization</td>
+                                                    <td>Categories, tags, collections</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Media</strong></td>
+                                                    <td>Visual presentation</td>
+                                                    <td>Images, videos, 3D models</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Shipping</strong></td>
+                                                    <td>Delivery information</td>
+                                                    <td>Weight, dimensions, shipping class</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Variations</strong></td>
+                                                    <td>Product options</td>
+                                                    <td>Size, color, material</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>SEO</strong></td>
+                                                    <td>Search engine data</td>
+                                                    <td>Meta title, description, keywords</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Product Variations</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="small">Product variations handle different versions of the same product, like sizes or colors.</p>
+                                    
+                                    <div class="code-block">
+<pre><code class="language-sql">-- Product Variations Schema
+CREATE TABLE product_attributes (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  display_name VARCHAR(100) NOT NULL,
+  type ENUM('select', 'color', 'button', 'image') DEFAULT 'select'
+);
+
+CREATE TABLE attribute_values (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  attribute_id INT NOT NULL,
+  value VARCHAR(100) NOT NULL,
+  display_value VARCHAR(100) NOT NULL,
+  color_code VARCHAR(20),
+  image_url VARCHAR(255),
+  FOREIGN KEY (attribute_id) REFERENCES product_attributes(id) ON DELETE CASCADE
+);
+
+CREATE TABLE product_variations (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  product_id INT NOT NULL,
+  sku VARCHAR(100),
+  price DECIMAL(10, 2),
+  sale_price DECIMAL(10, 2),
+  stock_quantity INT DEFAULT 0,
+  weight DECIMAL(8, 2),
+  is_default BOOLEAN DEFAULT FALSE,
+  FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);
+
+CREATE TABLE variation_attribute_values (
+  variation_id INT NOT NULL,
+  attribute_value_id INT NOT NULL,
+  PRIMARY KEY (variation_id, attribute_value_id),
+  FOREIGN KEY (variation_id) REFERENCES product_variations(id) ON DELETE CASCADE,
+  FOREIGN KEY (attribute_value_id) REFERENCES attribute_values(id) ON DELETE CASCADE
+);</code></pre>
+                                    </div>
+                                    
+                                    <div class="mt-3">
+                                        <h5 class="h6">Common Variation Types:</h5>
+                                        <ul class="small">
+                                            <li><strong>Clothing:</strong> Size, Color, Material, Style</li>
+                                            <li><strong>Electronics:</strong> Storage, Color, RAM, Processor</li>
+                                            <li><strong>Furniture:</strong> Size, Color, Finish, Material</li>
+                                            <li><strong>Food:</strong> Flavor, Size, Package Type</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="h6 mb-3">Product JSON Structure Example:</h4>
+                        <div class="code-block">
+<pre><code class="language-json">{
+  "id": 12345,
+  "name": "Premium Wireless Headphones",
+  "slug": "premium-wireless-headphones",
+  "description": "High-quality noise-canceling headphones with 30-hour battery life and comfortable ear cups.",
+  "sku": "WH-1000XM5",
+  "barcode": "9876543210123",
+  "status": "active",
+  "featured": true,
+  "pricing": {
+    "price": 349.99,
+    "compareAtPrice": 399.99,
+    "cost": 180.00,
+    "onSale": true
+  },
+  "inventory": {
+    "stockQuantity": 120,
+    "lowStockThreshold": 15,
+    "trackInventory": true,
+    "allowBackorders": false
+  },
+  "categories": [
+    {
+      "id": 10,
+      "name": "Electronics",
+      "slug": "electronics"
+    },
+    {
+      "id": 15,
+      "name": "Audio Devices",
+      "slug": "audio-devices"
+    }
+  ],
+  "tags": ["wireless", "noise-canceling", "premium", "bluetooth"],
+  "attributes": [
+    {
+      "id": 1,
+      "name": "color",
+      "displayName": "Color",
+      "values": [
+        {
+          "id": 101,
+          "value": "black",
+          "displayValue": "Black",
+          "colorCode": "#000000"
+        },
+        {
+          "id": 102,
+          "value": "silver",
+          "displayValue": "Silver",
+          "colorCode": "#C0C0C0"
+        }
+      ]
+    }
+  ],
+  "variations": [
+    {
+      "id": 1001,
+      "sku": "WH-1000XM5-BLK",
+      "price": 349.99,
+      "salePrice": 349.99,
+      "stockQuantity": 75,
+      "isDefault": true,
+      "attributeValues": [
+        {
+          "attributeId": 1,
+          "valueId": 101
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "sku": "WH-1000XM5-SLV",
+      "price": 349.99,
+      "salePrice": 349.99,
+      "stockQuantity": 45,
+      "isDefault": false,
+      "attributeValues": [
+        {
+          "attributeId": 1,
+          "valueId": 102
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "id": 5001,
+      "type": "image",
+      "url": "/images/products/headphones-black-main.jpg",
+      "altText": "Black wireless headphones front view",
+      "position": 1
+    },
+    {
+      "id": 5002,
+      "type": "image",
+      "url": "/images/products/headphones-black-side.jpg",
+      "altText": "Black wireless headphones side view",
+      "position": 2
+    }
+  ],
+  "specs": [
+    {
+      "name": "Battery Life",
+      "value": "30 hours"
+    },
+    {
+      "name": "Connectivity",
+      "value": "Bluetooth 5.2"
+    },
+    {
+      "name": "Weight",
+      "value": "254g"
+    }
+  ],
+  "shipping": {
+    "weight": 0.7,
+    "dimensions": {
+      "length": 20,
+      "width": 18,
+      "height": 8
+    },
+    "freeShipping": true,
+    "shippingClass": "standard"
+  },
+  "seo": {
+    "metaTitle": "Premium Wireless Noise-Canceling Headphones | YourBrand",
+    "metaDescription": "Experience superior sound quality with our Premium Wireless Headphones featuring industry-leading noise cancellation and 30-hour battery life.",
+    "metaKeywords": "wireless headphones, noise-canceling, premium audio"
+  },
+  "createdAt": "2023-05-15T10:30:00Z",
+  "updatedAt": "2023-06-20T14:15:00Z"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Inventory Management</h3>
+                    <p>Effective inventory management ensures products are in stock when customers want to purchase them.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Inventory Tracking</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="small">Implement inventory tracking to manage stock levels and prevent overselling.</p>
+                                    
+                                    <div class="code-block">
+<pre><code class="language-javascript">// inventory.js - Inventory management functions
+const pool = require('../database');
+
+// Update inventory when order is placed
+async function updateInventory(items, connection) {
+  for (const item of items) {
+    // Check if product exists and has sufficient stock
+    const [products] = await connection.query(
+      'SELECT id, stock_quantity FROM products WHERE id = ?',
+      [item.productId]
+    );
+    
+    if (products.length === 0) {
+      throw new Error(`Product with ID ${item.productId} not found`);
+    }
+    
+    const product = products[0];
+    
+    // Check if product variation exists
+    if (item.variationId) {
+      const [variations] = await connection.query(
+        'SELECT id, stock_quantity FROM product_variations WHERE id = ?',
+        [item.variationId]
+      );
+      
+      if (variations.length === 0) {
+        throw new Error(`Variation with ID ${item.variationId} not found`);
+      }
+      
+      const variation = variations[0];
+      
+      if (variation.stock_quantity < item.quantity) {
+        throw new Error(`Insufficient stock for variation ${item.variationId}`);
+      }
+      
+      // Update variation stock
+      await connection.query(
+        'UPDATE product_variations SET stock_quantity = stock_quantity - ? WHERE id = ?',
+        [item.quantity, item.variationId]
+      );
+    } else {
+      // Check if product has sufficient stock
+      if (product.stock_quantity < item.quantity) {
+        throw new Error(`Insufficient stock for product ${item.productId}`);
+      }
+      
+      // Update product stock
+      await connection.query(
+        'UPDATE products SET stock_quantity = stock_quantity - ? WHERE id = ?',
+        [item.quantity, item.productId]
+      );
+    }
+  }
+}
+
+// Check if product is in stock
+async function checkStock(productId, variationId = null, quantity = 1) {
+  try {
+    if (variationId) {
+      const [variations] = await pool.query(
+        'SELECT stock_quantity FROM product_variations WHERE id = ?',
+        [variationId]
+      );
+      
+      if (variations.length === 0 || variations[0].stock_quantity < quantity) {
+        return false;
+      }
+    } else {
+      const [products] = await pool.query(
+        'SELECT stock_quantity FROM products WHERE id = ?',
+        [productId]
+      );
+      
+      if (products.length === 0 || products[0].stock_quantity < quantity) {
+        return false;
+      }
+    }
+    
+    return true;
+  } catch (error) {
+    console.error('Error checking stock:', error);
+    return false;
+  }
+}
+
+// Get low stock products
+async function getLowStockProducts() {
+  try {
+    const [products] = await pool.query(
+      `SELECT id, name, stock_quantity, low_stock_threshold
+       FROM products 
+       WHERE stock_quantity <= low_stock_threshold 
+         AND status = 'active'
+       ORDER BY (stock_quantity / low_stock_threshold) ASC`
+    );
+    
+    return products;
+  } catch (error) {
+    console.error('Error getting low stock products:', error);
+    throw error;
+  }
+}
+
+// Record stock movement
+async function recordStockMovement(productId, variationId, quantity, type, notes) {
+  try {
+    await pool.query(
+      `INSERT INTO inventory_movements 
+       (product_id, variation_id, quantity, movement_type, notes) 
+       VALUES (?, ?, ?, ?, ?)`,
+      [productId, variationId, quantity, type, notes]
+    );
+  } catch (error) {
+    console.error('Error recording stock movement:', error);
+    throw error;
+  }
+}
+
+module.exports = {
+  updateInventory,
+  checkStock,
+  getLowStockProducts,
+  recordStockMovement
+};</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Inventory Dashboard Implementation</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="small">Create an inventory dashboard to monitor stock levels and manage products.</p>
+                                    
+                                    <div class="inventory-dashboard mb-3">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="card bg-success text-white">
+                                                    <div class="card-body p-3 d-flex align-items-center">
+                                                        <div class="me-3">
+                                                            <i class="fas fa-box-open fa-2x"></i>
+                                                        </div>
+                                                        <div>
+                                                            <div class="text-value-lg">128</div>
+                                                            <div>In Stock Products</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card bg-danger text-white">
+                                                    <div class="card-body p-3 d-flex align-items-center">
+                                                        <div class="me-3">
+                                                            <i class="fas fa-exclamation-triangle fa-2x"></i>
+                                                        </div>
+                                                        <div>
+                                                            <div class="text-value-lg">14</div>
+                                                            <div>Low Stock Items</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card mt-3">
+                                            <div class="card-header">
+                                                <h5>Low Stock Items</h5>
+                                            </div>
+                                            <div class="table-responsive">
+                                                <table class="table table-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Product</th>
+                                                            <th>Stock</th>
+                                                            <th>Threshold</th>
+                                                            <th>Status</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Wireless Headphones (Black)</td>
+                                                            <td>5</td>
+                                                            <td>15</td>
+                                                            <td><span class="badge bg-danger">Critical</span></td>
+                                                            <td>
+                                                                <button class="btn btn-sm btn-primary">Restock</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bluetooth Speaker (Blue)</td>
+                                                            <td>8</td>
+                                                            <td>10</td>
+                                                            <td><span class="badge bg-warning text-dark">Low</span></td>
+                                                            <td>
+                                                                <button class="btn btn-sm btn-primary">Restock</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5 class="h6 mb-2">Stock Adjustment Form:</h5>
+                                    <div class="code-block">
+<pre><code class="language-html">&lt;!-- Stock Adjustment Form -->
+&lt;form id="stockAdjustmentForm">
+  &lt;div class="row g-3">
+    &lt;div class="col-md-6">
+      &lt;label for="productId" class="form-label">Product&lt;/label>
+      &lt;select class="form-select" id="productId" required>
+        &lt;option value="">Select Product&lt;/option>
+        &lt;option value="1">Wireless Headphones (Black)&lt;/option>
+        &lt;option value="2">Bluetooth Speaker (Blue)&lt;/option>
+      &lt;/select>
+    &lt;/div>
+    
+    &lt;div class="col-md-6">
+      &lt;label for="adjustmentType" class="form-label">Adjustment Type&lt;/label>
+      &lt;select class="form-select" id="adjustmentType" required>
+        &lt;option value="add">Add Stock&lt;/option>
+        &lt;option value="remove">Remove Stock&lt;/option>
+        &lt;option value="set">Set Stock Level&lt;/option>
+      &lt;/select>
+    &lt;/div>
+    
+    &lt;div class="col-md-6">
+      &lt;label for="quantity" class="form-label">Quantity&lt;/label>
+      &lt;input type="number" class="form-control" id="quantity" min="1" required>
+    &lt;/div>
+    
+    &lt;div class="col-md-6">
+      &lt;label for="reason" class="form-label">Reason&lt;/label>
+      &lt;select class="form-select" id="reason" required>
+        &lt;option value="purchase">New Purchase&lt;/option>
+        &lt;option value="return">Customer Return&lt;/option>
+        &lt;option value="damage">Damaged Product&lt;/option>
+        &lt;option value="correction">Inventory Correction&lt;/option>
+      &lt;/select>
+    &lt;/div>
+    
+    &lt;div class="col-12">
+      &lt;label for="notes" class="form-label">Notes&lt;/label>
+      &lt;textarea class="form-control" id="notes" rows="2">&lt;/textarea>
+    &lt;/div>
+    
+    &lt;div class="col-12">
+      &lt;button type="submit" class="btn btn-primary">Submit Adjustment&lt;/button>
+    &lt;/div>
+  &lt;/div>
+&lt;/form></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="h6 mb-3">Inventory Management Best Practices:</h4>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card border-0 bg-light h-100">
+                                    <div class="card-body">
+                                        <h5 class="h6 mb-3">Stock Level Alerts</h5>
+                                        <ul class="small mb-0">
+                                            <li>Set appropriate low stock thresholds for each product</li>
+                                            <li>Implement email alerts for low stock items</li>
+                                            <li>Categorize stock levels (Critical, Low, Optimal)</li>
+                                            <li>Create automatic reordering based on thresholds</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 bg-light h-100">
+                                    <div class="card-body">
+                                        <h5 class="h6 mb-3">Inventory Reports</h5>
+                                        <ul class="small mb-0">
+                                            <li>Generate regular inventory valuation reports</li>
+                                            <li>Track inventory turnover rates</li>
+                                            <li>Monitor product performance metrics</li>
+                                            <li>Analyze sales velocity to predict future stock needs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 bg-light h-100">
+                                    <div class="card-body">
+                                        <h5 class="h6 mb-3">Technical Implementation</h5>
+                                        <ul class="small mb-0">
+                                            <li>Use database transactions for inventory updates</li>
+                                            <li>Implement concurrency control to prevent race conditions</li>
+                                            <li>Log all inventory movements for audit trails</li>
+                                            <li>Create periodic reconciliation processes to verify accuracy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Product Search & Filtering</h3>
+                    <p>Implementing effective search and filtering capabilities helps customers find products quickly.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Product Search Implementation</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="small">Implement full-text search for accurate and fast product discovery.</p>
+                                    
+                                    <div class="code-block">
+<pre><code class="language-sql">-- Add full-text search to products table
+ALTER TABLE products ADD FULLTEXT INDEX product_search (name, description, sku);
+
+-- MySQL full-text search query
+SELECT 
+  p.*, 
+  MATCH(p.name, p.description, p.sku) AGAINST('wireless headphones' IN NATURAL LANGUAGE MODE) AS relevance
+FROM 
+  products p
+WHERE 
+  MATCH(p.name, p.description, p.sku) AGAINST('wireless headphones' IN NATURAL LANGUAGE MODE)
+ORDER BY 
+  relevance DESC
+LIMIT 20;</code></pre>
+                                    </div>
+                                    
+                                    <p class="small mt-3">For more advanced search with typo-tolerance and better relevance, consider using a dedicated search service:</p>
+                                    
+                                    <div class="code-block">
+<pre><code class="language-javascript">// search.js - Using Algolia for advanced product search
+const algoliasearch = require('algoliasearch');
+
+// Initialize the Algolia client
+const client = algoliasearch(
+  process.env.ALGOLIA_APP_ID,
+  process.env.ALGOLIA_ADMIN_API_KEY
+);
+const index = client.initIndex('products');
+
+// Search products
+async function searchProducts(query, options = {}) {
+  try {
+    const { category, price_min, price_max, attributes = {}, page = 0, hitsPerPage = 20 } = options;
+    
+    // Build filters
+    let filters = '';
+    
+    if (category) {
+      filters += `categories.id:${category}`;
+    }
+    
+    if (price_min || price_max) {
+      if (filters) filters += ' AND ';
+      filters += 'price:';
+      if (price_min && price_max) {
+        filters += `${price_min} TO ${price_max}`;
+      } else if (price_min) {
+        filters += `>= ${price_min}`;
+      } else if (price_max) {
+        filters += `<= ${price_max}`;
+      }
+    }
+    
+    // Add attribute filters
+    Object.entries(attributes).forEach(([attribute, values]) => {
+      if (values && values.length > 0) {
+        if (filters) filters += ' AND ';
+        filters += `(${values.map(v => `attributes.${attribute}:"${v}"`).join(' OR ')})`;
+      }
+    });
+    
+    // Execute search
+    const result = await index.search(query, {
+      filters,
+      page,
+      hitsPerPage
+    });
+    
+    return result;
+  } catch (error) {
+    console.error('Search error:', error);
+    throw error;
+  }
+}
+
+// Function to index a product
+async function indexProduct(product) {
+  try {
+    await index.saveObject({
+      objectID: product.id.toString(),
+      ...product,
+      _tags: [
+        ...product.categories.map(c => `category:${c.id}`),
+        ...product.tags.map(t => `tag:${t}`)
+      ]
+    });
+  } catch (error) {
+    console.error('Indexing error:', error);
+    throw error;
+  }
+}
+
+// Function to remove a product from the index
+async function removeProductFromIndex(productId) {
+  try {
+    await index.deleteObject(productId.toString());
+  } catch (error) {
+    console.error('Index removal error:', error);
+    throw error;
+  }
+}
+
+module.exports = {
+  searchProducts,
+  indexProduct,
+  removeProductFromIndex
+};</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Product Filtering Implementation</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="small">Create dynamic filters that allow customers to narrow down product results.</p>
+                                    
+                                    <div class="code-block">
+<pre><code class="language-javascript">// filtering.js - Dynamic product filtering 
+const pool = require('../database');
+
+// Get filtered products
+async function getFilteredProducts(options = {}) {
+  try {
+    const {
+      category,
+      price_min,
+      price_max,
+      attributes = {},
+      sort_by = 'created_at',
+      sort_order = 'desc',
+      page = 1,
+      limit = 20
+    } = options;
+    
+    const offset = (page - 1) * limit;
+    const params = [];
+    
+    // Start building the query
+    let query = `
+      SELECT DISTINCT p.* 
+      FROM products p
+    `;
+    
+    // Join tables based on filters
+    if (category) {
+      query += `
+        INNER JOIN product_categories pc ON p.id = pc.product_id
+      `;
+    }
+    
+    // Add attribute joins if needed
+    if (Object.keys(attributes).length > 0) {
+      query += `
+        INNER JOIN product_variations pv ON p.id = pv.product_id
+        INNER JOIN variation_attribute_values vav ON pv.id = vav.variation_id
+      `;
+    }
+    
+    // Start the WHERE clause
+    query += ` WHERE p.status = 'active'`;
+    
+    // Add category filter
+    if (category) {
+      query += ` AND pc.category_id = ?`;
+      params.push(category);
+    }
+    
+    // Add price range filter
+    if (price_min) {
+      query += ` AND p.price >= ?`;
+      params.push(price_min);
+    }
+    
+    if (price_max) {
+      query += ` AND p.price <= ?`;
+      params.push(price_max);
+    }
+    
+    // Add attribute filters
+    Object.entries(attributes).forEach(([attribute, values]) => {
+      if (values && values.length > 0) {
+        const attributeParams = values.map(v => '?').join(',');
+        query += `
+          AND vav.attribute_value_id IN (
+            SELECT av.id 
+            FROM attribute_values av
+            INNER JOIN product_attributes pa ON av.attribute_id = pa.id
+            WHERE pa.name = ? AND av.value IN (${attributeParams})
+          )
+        `;
+        params.push(attribute, ...values);
+      }
+    });
+    
+    // Count total matching products
+    const countQuery = `SELECT COUNT(DISTINCT p.id) as total FROM ${query.split('FROM')[1]}`;
+    const [countResult] = await pool.query(countQuery, params);
+    const totalProducts = countResult[0].total;
+    
+    // Add sorting
+    query += ` ORDER BY p.${sort_by} ${sort_order === 'asc' ? 'ASC' : 'DESC'}`;
+    
+    // Add pagination
+    query += ` LIMIT ? OFFSET ?`;
+    params.push(limit, offset);
+    
+    // Execute the final query
+    const [products] = await pool.query(query, params);
+    
+    // Get available filters based on matching products
+    const filters = await getAvailableFilters(options);
+    
+    return {
+      products,
+      filters,
+      pagination: {
+        total: totalProducts,
+        page,
+        limit,
+        totalPages: Math.ceil(totalProducts / limit)
+      }
+    };
+  } catch (error) {
+    console.error('Error getting filtered products:', error);
+    throw error;
+  }
+}
+
+// Get available filters based on the current result set
+async function getAvailableFilters(options) {
+  try {
+    const { category } = options;
+    const filters = {};
+    
+    // Build base query for products matching the current filters
+    let baseQuery = `
+      SELECT DISTINCT p.id 
+      FROM products p
+    `;
+    
+    if (category) {
+      baseQuery += `
+        INNER JOIN product_categories pc ON p.id = pc.product_id
+        WHERE pc.category_id = ?
+      `;
+    } else {
+      baseQuery += ` WHERE 1=1`;
+    }
+    
+    const baseParams = category ? [category] : [];
+    
+    // Get price range
+    const [priceRange] = await pool.query(`
+      SELECT MIN(price) as min_price, MAX(price) as max_price
+      FROM products p
+      ${category ? 'INNER JOIN product_categories pc ON p.id = pc.product_id' : ''}
+      WHERE p.status = 'active' ${category ? 'AND pc.category_id = ?' : ''}
+    `, baseParams);
+    
+    filters.price_range = {
+      min: priceRange[0].min_price,
+      max: priceRange[0].max_price
+    };
+    
+    // Get attribute filters
+    const [attributes] = await pool.query(`
+      SELECT 
+        pa.id, pa.name, pa.display_name, pa.type,
+        av.id as value_id, av.value, av.display_value,
+        COUNT(DISTINCT pv.product_id) as product_count
+      FROM 
+        product_attributes pa
+        INNER JOIN attribute_values av ON pa.id = av.attribute_id
+        INNER JOIN variation_attribute_values vav ON av.id = vav.attribute_value_id
+        INNER JOIN product_variations pv ON vav.variation_id = pv.id
+        INNER JOIN products p ON pv.product_id = p.id
+        ${category ? 'INNER JOIN product_categories pc ON p.id = pc.product_id' : ''}
+      WHERE 
+        p.status = 'active'
+        ${category ? 'AND pc.category_id = ?' : ''}
+      GROUP BY 
+        pa.id, av.id
+      ORDER BY 
+        pa.display_name, av.display_value
+    `, baseParams);
+    
+    // Organize attributes by name
+    filters.attributes = {};
+    
+    attributes.forEach(attr => {
+      if (!filters.attributes[attr.name]) {
+        filters.attributes[attr.name] = {
+          id: attr.id,
+          name: attr.name,
+          display_name: attr.display_name,
+          type: attr.type,
+          values: []
+        };
+      }
+      
+      filters.attributes[attr.name].values.push({
+        id: attr.value_id,
+        value: attr.value,
+        display_value: attr.display_value,
+        product_count: attr.product_count
+      });
+    });
+    
+    return filters;
+  } catch (error) {
+    console.error('Error getting available filters:', error);
+    throw error;
+  }
+}
+
+module.exports = {
+  getFilteredProducts
+};</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="h6 mb-3">Interactive Search & Filter Example:</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-header bg-light">
+                                        <h5 class="h6 mb-0">Product Filters</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-bold small">Price Range</label>
+                                            <div class="d-flex align-items-center">
+                                                <input type="number" class="form-control form-control-sm" placeholder="Min" min="0">
+                                                <div class="mx-2">-</div>
+                                                <input type="number" class="form-control form-control-sm" placeholder="Max" min="0">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label fw-bold small">Category</label>
+                                            <select class="form-select form-select-sm">
+                                                <option value="">All Categories</option>
+                                                <option>Electronics</option>
+                                                <option>Clothing</option>
+                                                <option>Home & Kitchen</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label fw-bold small">Brand</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="brand1">
+                                                <label class="form-check-label small" for="brand1">Apple (24)</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="brand2">
+                                                <label class="form-check-label small" for="brand2">Samsung (18)</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="brand3">
+                                                <label class="form-check-label small" for="brand3">Sony (15)</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label fw-bold small">Color</label>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <div class="color-filter bg-dark" data-bs-toggle="tooltip" title="Black"></div>
+                                                <div class="color-filter bg-primary" data-bs-toggle="tooltip" title="Blue"></div>
+                                                <div class="color-filter bg-danger" data-bs-toggle="tooltip" title="Red"></div>
+                                                <div class="color-filter bg-success" data-bs-toggle="tooltip" title="Green"></div>
+                                                <div class="color-filter bg-white border" data-bs-toggle="tooltip" title="White"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="btn btn-primary btn-sm w-100">Apply Filters</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Search products..." value="wireless headphones">
+                                    <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <p class="small text-muted mb-0">Showing 16 results for "wireless headphones"</p>
+                                    <div class="d-flex align-items-center">
+                                        <label class="small text-muted me-2">Sort by:</label>
+                                        <select class="form-select form-select-sm" style="width: auto;">
+                                            <option>Best Match</option>
+                                            <option>Price: Low to High</option>
+                                            <option>Price: High to Low</option>
+                                            <option>Newest</option>
+                                            <option>Customer Rating</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card product-card h-100">
+                                            <img src="https://via.placeholder.com/300x300?text=Headphones+1" class="card-img-top p-3" alt="Product">
+                                            <div class="card-body">
+                                                <h5 class="card-title h6">Premium Wireless Headphones</h5>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="text-danger fw-bold">$149.99</span>
+                                                    <div class="rating">
+                                                        <i class="fas fa-star text-warning"></i>
+                                                        <i class="fas fa-star text-warning"></i>
+                                                        <i class="fas fa-star text-warning"></i>
+                                                        <i class="fas fa-star text-warning"></i>
+                                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                                        <span class="small">(4.5)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card product-card h-100">
+                                            <img src="https://via.placeholder.com/300x300?text=Headphones+2" class="card-img-top p-3" alt="Product">
+                                            <div class="card-body">
+                                                <h5 class="card-title h6">Bluetooth Sport Earbuds</h5>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="text-danger fw-bold">$89.99</span>
+                                                    <div class="rating">
+                                                        <i class="fas fa-star text-warning"></i>
+                                                        <i class="fas fa-star text-warning"></i>
+                                                        <i class="fas fa-star text-warning"></i>
+                                                        <i class="fas fa-star text-warning"></i>
+                                                        <i class="far fa-star text-warning"></i>
+                                                        <span class="small">(4.0)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart & Checkout Section -->
+        <section id="cart" class="mb-5 pt-4">
+            <h2 class="display-6 mb-4">Shopping Cart & Checkout</h2>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Shopping Cart Implementation</h3>
+                    <p>A well-designed shopping cart is critical for conversion and provides a smooth path to checkout.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Cart JavaScript Implementation</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="code-block">
+<pre><code class="language-javascript">// cart.js - Shopping cart functionality
+$(document).ready(function() {
+  // Cart object to manage products
+  const cart = {
+    items: [],
+    subtotal: 0,
+    tax: 0,
+    shipping: 0,
+    total: 0,
+    
+    // Initialize cart from localStorage or session
+    init: function() {
+      // Try to load from localStorage
+      const savedCart = localStorage.getItem('cart');
+      
+      if (savedCart) {
+        try {
+          const parsedCart = JSON.parse(savedCart);
+          this.items = parsedCart.items || [];
+          this.recalculate();
+        } catch (e) {
+          console.error('Error parsing saved cart:', e);
+          this.clearCart();
+        }
+      }
+      
+      this.renderCart();
+      this.updateCartCount();
+    },
+    
+    // Add item to cart
+    addItem: function(product) {
+      // Check if product already exists in cart
+      const existingItem = this.items.find(item => 
+        item.productId === product.id && 
+        item.variationId === (product.variationId || null)
+      );
+      
+      if (existingItem) {
+        // Update quantity if already in cart
+        existingItem.quantity += product.quantity || 1;
+      } else {
+        // Add new item to cart
+        this.items.push({
+          productId: product.id,
+          variationId: product.variationId || null,
+          name: product.name,
+          price: product.price,
+          salePrice: product.salePrice || product.price,
+          image: product.image,
+          quantity: product.quantity || 1,
+          attributes: product.attributes || {}
+        });
+      }
+      
+      this.saveCart();
+      this.recalculate();
+      this.renderCart();
+      this.updateCartCount();
+      this.showCartNotification(product.name);
+    },
+    
+    // Update item quantity
+    updateQuantity: function(index, quantity) {
+      if (index >= 0 && index < this.items.length) {
+        if (quantity <= 0) {
+          // Remove item if quantity is 0 or negative
+          this.removeItem(index);
+        } else {
+          // Update quantity
+          this.items[index].quantity = quantity;
+          this.saveCart();
+          this.recalculate();
+          this.renderCart();
+        }
+      }
+    },
+    
+    // Remove item from cart
+    removeItem: function(index) {
+      if (index >= 0 && index < this.items.length) {
+        this.items.splice(index, 1);
+        this.saveCart();
+        this.recalculate();
+        this.renderCart();
+        this.updateCartCount();
+      }
+    },
+    
+    // Clear entire cart
+    clearCart: function() {
+      this.items = [];
+      this.saveCart();
+      this.recalculate();
+      this.renderCart();
+      this.updateCartCount();
+    },
+    
+    // Recalculate cart totals
+    recalculate: function() {
+      // Calculate subtotal
+      this.subtotal = this.items.reduce((total, item) => {
+        return total + (item.salePrice * item.quantity);
+      }, 0);
+      
+      // Calculate tax (example: 8%)
+      this.tax = this.subtotal * 0.08;
+      
+      // Calculate shipping (example: free over $50, otherwise $5.99)
+      this.shipping = this.subtotal > 50 ? 0 : 5.99;
+      
+      // Calculate total
+      this.total = this.subtotal + this.tax + this.shipping;
+    },
+    
+    // Save cart to localStorage
+    saveCart: function() {
+      localStorage.setItem('cart', JSON.stringify({
+        items: this.items
+      }));
+    },
+    
+    // Render cart to DOM
+    renderCart: function() {
+      const $cartContainer = $('#cartItems');
+      const $cartTotals = $('#cartTotals');
+      
+      if (this.items.length === 0) {
+        // Show empty cart message
+        $cartContainer.html(`
+          <div class="text-center py-4">
+            <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+            <p>Your cart is empty</p>
+            <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+          </div>
+        `);
+        
+        $cartTotals.hide();
+      } else {
+        // Render cart items
+        let html = '';
+        
+        this.items.forEach((item, index) => {
+          // Format price with 2 decimal places
+          const formattedPrice = item.salePrice.toFixed(2);
+          const itemTotal = (item.salePrice * item.quantity).toFixed(2);
+          
+          // Create attributes string
+          let attributesHtml = '';
+          if (Object.keys(item.attributes).length > 0) {
+            attributesHtml = '<div class="small text-muted">';
+            for (const [key, value] of Object.entries(item.attributes)) {
+              attributesHtml += `<span>${key}: ${value}</span>, `;
+            }
+            attributesHtml = attributesHtml.slice(0, -2) + '</div>';
+          }
+          
+          html += `
+            <div class="card mb-3 cart-item">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-md-2">
+                    <img src="${item.image}" alt="${item.name}" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-5">
+                    <h5 class="card-title h6">${item.name}</h5>
+                    ${attributesHtml}
+                  </div>
+                  <div class="col-md-2">
+                    <div class="input-group input-group-sm">
+                      <button class="btn btn-outline-secondary decrease-qty" data-index="${index}">-</button>
+                      <input type="number" class="form-control text-center item-qty" value="${item.quantity}" min="1" data-index="${index}">
+                      <button class="btn btn-outline-secondary increase-qty" data-index="${index}">+</button>
+                    </div>
+                  </div>
+                  <div class="col-md-2 text-end">
+                    <span class="fw-bold">$${itemTotal}</span>
+                    <div class="small text-muted">$${formattedPrice} each</div>
+                  </div>
+                  <div class="col-md-1 text-end">
+                    <button class="btn btn-sm text-danger remove-item" data-index="${index}">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        
+        $cartContainer.html(html);
+        
+        // Render totals
+        $cartTotals.html(`
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Order Summary</h5>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Subtotal:</span>
+                <span>$${this.subtotal.toFixed(2)}</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Estimated Tax:</span>
+                <span>$${this.tax.toFixed(2)}</span>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <span>Shipping:</span>
+                <span>${this.shipping === 0 ? 'Free' : '$' + this.shipping.toFixed(2)}</span>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between fw-bold">
+                <span>Total:</span>
+                <span>$${this.total.toFixed(2)}</span>
+              </div>
+              <button class="btn btn-primary w-100 mt-3" id="proceedToCheckout">
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
+        `);
+        
+        $cartTotals.show();
+      }
+      
+      // Add event listeners
+      this.addCartEventListeners();
+    },
+    
+    // Update cart count indicator
+    updateCartCount: function() {
+      const count = this.items.reduce((total, item) => total + item.quantity, 0);
+      $('.cart-count').text(count);
+      
+      if (count > 0) {
+        $('.cart-count').removeClass('d-none');
+      } else {
+        $('.cart-count').addClass('d-none');
+      }
+    },
+    
+    // Show cart notification
+    showCartNotification: function(productName) {
+      // Create notification element if it doesn't exist
+      if ($('#cartNotification').length === 0) {
+        $('body').append(`
+          <div id="cartNotification" class="position-fixed top-0 end-0 p-3" style="z-index: 1100">
+            <div class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header bg-success text-white">
+                <i class="fas fa-check-circle me-2"></i>
+                <strong class="me-auto">Added to Cart</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                <span id="notificationText"></span>
+                <div class="mt-2">
+                  <a href="cart.html" class="btn btn-sm btn-primary">View Cart</a>
+                  <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="toast">Continue Shopping</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `);
+      }
+      
+      // Update notification text and show it
+      $('#notificationText').text(`${productName} has been added to your cart.`);
+      
+      const toast = new bootstrap.Toast($('.toast'));
+      toast.show();
+    },
+    
+    // Add event listeners for cart interactions
+    addCartEventListeners: function() {
+      // Item quantity changes
+      $('.decrease-qty').on('click', (e) => {
+        const index = $(e.currentTarget).data('index');
+        const currentQty = this.items[index].quantity;
+        this.updateQuantity(index, currentQty - 1);
+      });
+      
+      $('.increase-qty').on('click', (e) => {
+        const index = $(e.currentTarget).data('index');
+        const currentQty = this.items[index].quantity;
+        this.updateQuantity(index, currentQty + 1);
+      });
+      
+      $('.item-qty').on('change', (e) => {
+        const index = $(e.currentTarget).data('index');
+        const newQty = parseInt($(e.currentTarget).val());
+        this.updateQuantity(index, newQty);
+      });
+      
+      // Remove item button
+      $('.remove-item').on('click', (e) => {
+        const index = $(e.currentTarget).data('index');
+        this.removeItem(index);
+      });
+      
+      // Proceed to checkout
+      $('#proceedToCheckout').on('click', () => {
+        window.location.href = 'checkout.html';
+      });
+    }
+  };
+  
+  // Initialize cart
+  cart.init();
+  
+  // Handle add to cart button clicks
+  $('.add-to-cart').on('click', function(e) {
+    e.preventDefault();
+    
+    const $productCard = $(this).closest('.product-card');
+    const productId = $productCard.data('product-id');
+    
+    // Fetch product details from API
+    $.ajax({
+      url: `/api/products/${productId}`,
+      type: 'GET',
+      success: function(product) {
+        cart.addItem({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          salePrice: product.sale_price || product.price,
+          image: product.media[0]?.url || 'placeholder.jpg',
+          quantity: 1
+        });
+      },
+      error: function(xhr) {
+        console.error('Error adding product to cart:', xhr);
+        alert('Failed to add product to cart. Please try again.');
+      }
+    });
+  });
+});</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Server-Side Cart Implementation</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="code-block">
+<pre><code class="language-javascript">// cart-api.js - Server-side cart handling with Express
+const express = require('express');
+const router = express.Router();
+const pool = require('../database');
+const { authenticate } = require('../middleware/auth');
+
+// Get cart for the current user or session
+router.get('/', async (req, res) => {
+  try {
+    let cart;
+    
+    if (req.user) {
+      // Logged in user: fetch cart from database
+      cart = await getUserCart(req.user.id);
+    } else {
+      // Guest user: get cart from session
+      cart = req.session.cart || { items: [], totals: calculateTotals([]) };
+    }
+    
+    res.json(cart);
+  } catch (error) {
+    console.error('Error fetching cart:', error);
+    res.status(500).json({ error: 'Failed to fetch cart' });
+  }
+});
+
+// Add item to cart
+router.post('/items', async (req, res) => {
+  try {
+    const { productId, variationId, quantity = 1 } = req.body;
+    
+    // Validate required fields
+    if (!productId) {
+      return res.status(400).json({ error: 'Product ID is required' });
+    }
+    
+    // Validate product exists
+    const [products] = await pool.query(
+      'SELECT * FROM products WHERE id = ? AND status = "active"',
+      [productId]
+    );
+    
+    if (products.length === 0) {
+      return res.status(404).json({ error: 'Product not found' });
+    }
+    
+    const product = products[0];
+    
+    // Check product stock
+    if (product.stock_quantity < quantity) {
+      return res.status(400).json({ error: 'Insufficient stock' });
+    }
+    
+    // If variation provided, validate and get details
+    let variation = null;
+    if (variationId) {
+      const [variations] = await pool.query(
+        'SELECT * FROM product_variations WHERE id = ? AND product_id = ?',
+        [variationId, productId]
+      );
+      
+      if (variations.length === 0) {
+        return res.status(404).json({ error: 'Variation not found' });
+      }
+      
+      variation = variations[0];
+      
+      // Check variation stock
+      if (variation.stock_quantity < quantity) {
+        return res.status(400).json({ error: 'Insufficient stock for selected variation' });
+      }
+    }
+    
+    // Get product image
+    const [images] = await pool.query(
+      'SELECT url FROM product_media WHERE product_id = ? AND position = 1 LIMIT 1',
+      [productId]
+    );
+    
+    const imageUrl = images.length > 0 ? images[0].url : null;
+    
+    // Create cart item
+    const cartItem = {
+      productId,
+      variationId: variationId || null,
+      name: product.name,
+      price: product.price,
+      salePrice: product.sale_price || product.price,
+      image: imageUrl,
+      quantity
+    };
+    
+    // If variation exists, get attributes
+    if (variation) {
+      // Get variation attributes
+      const [attributes] = await pool.query(`
+        SELECT 
+          pa.name, av.value, av.display_value
+        FROM 
+          variation_attribute_values vav
+          INNER JOIN attribute_values av ON vav.attribute_value_id = av.id
+          INNER JOIN product_attributes pa ON av.attribute_id = pa.id
+        WHERE 
+          vav.variation_id = ?
+      `, [variationId]);
+      
+      cartItem.attributes = attributes.reduce((acc, attr) => {
+        acc[attr.name] = attr.display_value;
+        return acc;
+      }, {});
+      
+      // Use variation price if available
+      if (variation.price) {
+        cartItem.price = variation.price;
+        cartItem.salePrice = variation.sale_price || variation.price;
+      }
+    }
+    
+    let cart;
+    
+    if (req.user) {
+      // Logged in user: update cart in database
+      cart = await addToUserCart(req.user.id, cartItem);
+    } else {
+      // Guest user: update cart in session
+      cart = req.session.cart || { items: [], totals: calculateTotals([]) };
+      
+      // Check if item already exists in cart
+      const existingItemIndex = cart.items.findIndex(item => 
+        item.productId === cartItem.productId && 
+        item.variationId === cartItem.variationId
+      );
+      
+      if (existingItemIndex !== -1) {
+        // Update existing item
+        cart.items[existingItemIndex].quantity += cartItem.quantity;
+      } else {
+        // Add new item
+        cart.items.push(cartItem);
+      }
+      
+      // Recalculate totals
+      cart.totals = calculateTotals(cart.items);
+      
+      // Save updated cart to session
+      req.session.cart = cart;
+    }
+    
+    res.json(cart);
+  } catch (error) {
+    console.error('Error adding to cart:', error);
+    res.status(500).json({ error: 'Failed to add item to cart' });
+  }
+});
+
+// Update cart item quantity
+router.put('/items/:itemId', async (req, res) => {
+  try {
+    const { itemId } = req.params;
+    const { quantity } = req.body;
+    
+    // Validate quantity
+    if (!quantity || quantity < 0) {
+      return res.status(400).json({ error: 'Invalid quantity' });
+    }
+    
+    let cart;
+    
+    if (req.user) {
+      // Logged in user: update cart in database
+      if (quantity === 0) {
+        // Remove item
+        cart = await removeFromUserCart(req.user.id, itemId);
+      } else {
+        // Update quantity
+        cart = await updateUserCartItemQuantity(req.user.id, itemId, quantity);
+      }
+    } else {
+      // Guest user: update cart in session
+      cart = req.session.cart || { items: [], totals: calculateTotals([]) };
+      
+      const itemIndex = parseInt(itemId);
+      
+      if (isNaN(itemIndex) || itemIndex < 0 || itemIndex >= cart.items.length) {
+        return res.status(404).json({ error: 'Cart item not found' });
+      }
+      
+      if (quantity === 0) {
+        // Remove item
+        cart.items.splice(itemIndex, 1);
+      } else {
+        // Update quantity
+        cart.items[itemIndex].quantity = quantity;
+      }
+      
+      // Recalculate totals
+      cart.totals = calculateTotals(cart.items);
+      
+      // Save updated cart to session
+      req.session.cart = cart;
+    }
+    
+    res.json(cart);
+  } catch (error) {
+    console.error('Error updating cart item:', error);
+    res.status(500).json({ error: 'Failed to update cart item' });
+  }
+});
+
+// Clear cart
+router.delete('/', async (req, res) => {
+  try {
+    if (req.user) {
+      // Logged in user: clear cart in database
+      await clearUserCart(req.user.id);
+    } else {
+      // Guest user: clear cart in session
+      req.session.cart = { items: [], totals: calculateTotals([]) };
+    }
+    
+    res.json({ message: 'Cart cleared successfully' });
+  } catch (error) {
+    console.error('Error clearing cart:', error);
+    res.status(500).json({ error: 'Failed to clear cart' });
+  }
+});
+
+// Helper function to calculate cart totals
+function calculateTotals(items) {
+  // Calculate subtotal
+  const subtotal = items.reduce((total, item) => {
+    return total + (item.salePrice * item.quantity);
+  }, 0);
+  
+  // Calculate tax (example: 8%)
+  const tax = subtotal * 0.08;
+  
+  // Calculate shipping (example: free over $50, otherwise $5.99)
+  const shipping = subtotal > 50 ? 0 : 5.99;
+  
+  // Calculate total
+  const total = subtotal + tax + shipping;
+  
+  return {
+    subtotal,
+    tax,
+    shipping,
+    total
+  };
+}
+
+// Database helper functions
+async function getUserCart(userId) {
+  // Get user's cart from database
+  const [cartItems] = await pool.query(`
+    SELECT 
+      ci.id,
+      ci.product_id as productId,
+      ci.variation_id as variationId,
+      p.name,
+      ci.price,
+      ci.sale_price as salePrice,
+      pm.url as image,
+      ci.quantity,
+      ci.attributes
+    FROM 
+      cart_items ci
+      INNER JOIN products p ON ci.product_id = p.id
+      LEFT JOIN product_media pm ON p.id = pm.product_id AND pm.position = 1
+    WHERE 
+      ci.user_id = ?
+    ORDER BY 
+      ci.created_at
+  `, [userId]);
+  
+  // Parse attributes JSON
+  const items = cartItems.map(item => ({
+    ...item,
+    attributes: item.attributes ? JSON.parse(item.attributes) : {}
+  }));
+  
+  // Calculate totals
+  const totals = calculateTotals(items);
+  
+  return { items, totals };
+}
+
+async function addToUserCart(userId, cartItem) {
+  // Start transaction
+  const connection = await pool.getConnection();
+  await connection.beginTransaction();
+  
+  try {
+    // Check if item already exists in cart
+    const [existingItems] = await connection.query(`
+      SELECT id, quantity 
+      FROM cart_items 
+      WHERE user_id = ? AND product_id = ? AND variation_id ${cartItem.variationId ? '= ?' : 'IS NULL'}
+    `, cartItem.variationId 
+      ? [userId, cartItem.productId, cartItem.variationId] 
+      : [userId, cartItem.productId]
+    );
+    
+    if (existingItems.length > 0) {
+      // Update existing item
+      await connection.query(`
+        UPDATE cart_items
+        SET quantity = quantity + ?, updated_at = NOW()
+        WHERE id = ?
+      `, [cartItem.quantity, existingItems[0].id]);
+    } else {
+      // Insert new item
+      await connection.query(`
+        INSERT INTO cart_items (
+          user_id, product_id, variation_id, price, sale_price,
+          quantity, attributes, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW())
+      `, [
+        userId, 
+        cartItem.productId, 
+        cartItem.variationId, 
+        cartItem.price,
+        cartItem.salePrice,
+        cartItem.quantity,
+        JSON.stringify(cartItem.attributes || {})
+      ]);
+    }
+    
+    await connection.commit();
+    
+    // Get updated cart
+    return await getUserCart(userId);
+  } catch (error) {
+    await connection.rollback();
+    throw error;
+  } finally {
+    connection.release();
+  }
+}
+
+// Additional helper functions for updating and removing cart items...
+
+module.exports = router;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="h6 mb-3">Interactive Cart Preview:</h4>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="cartItems">
+                                    <div class="card mb-3 cart-item">
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-md-2">
+                                                    <img src="https://via.placeholder.com/80?text=Product" alt="Product" class="img-fluid rounded">
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <h5 class="card-title h6">Premium Wireless Headphones</h5>
+                                                    <div class="small text-muted">Color: Black, Size: Universal</div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="input-group input-group-sm">
+                                                        <button class="btn btn-outline-secondary decrease-qty">-</button>
+                                                        <input type="number" class="form-control text-center item-qty" value="1" min="1">
+                                                        <button class="btn btn-outline-secondary increase-qty">+</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-end">
+                                                    <span class="fw-bold">$149.99</span>
+                                                    <div class="small text-muted">$149.99 each</div>
+                                                </div>
+                                                <div class="col-md-1 text-end">
+                                                    <button class="btn btn-sm text-danger remove-item">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3 cart-item">
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-md-2">
+                                                    <img src="https://via.placeholder.com/80?text=Product" alt="Product" class="img-fluid rounded">
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <h5 class="card-title h6">Smartphone Charging Cable</h5>
+                                                    <div class="small text-muted">Color: White, Length: 6ft</div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="input-group input-group-sm">
+                                                        <button class="btn btn-outline-secondary decrease-qty">-</button>
+                                                        <input type="number" class="form-control text-center item-qty" value="2" min="1">
+                                                        <button class="btn btn-outline-secondary increase-qty">+</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-end">
+                                                    <span class="fw-bold">$29.98</span>
+                                                    <div class="small text-muted">$14.99 each</div>
+                                                </div>
+                                                <div class="col-md-1 text-end">
+                                                    <button class="btn btn-sm text-danger remove-item">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div id="cartTotals">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Order Summary</h5>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Subtotal:</span>
+                                                <span>$179.97</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Estimated Tax:</span>
+                                                <span>$14.40</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span>Shipping:</span>
+                                                <span>Free</span>
+                                            </div>
+                                            <hr>
+                                            <div class="d-flex justify-content-between fw-bold">
+                                                <span>Total:</span>
+                                                <span>$194.37</span>
+                                            </div>
+                                            <button class="btn btn-primary w-100 mt-3" id="proceedToCheckout">
+                                                Proceed to Checkout
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Checkout Process</h3>
+                    <p>A streamlined checkout experience minimizes abandonment and increases conversion rates.</p>
+                    
+                    <div class="row align-items-center mb-4">
+                        <div class="col-md-6">
+                            <h4 class="h6 mb-3">Checkout Best Practices:</h4>
+                            <ul>
+                                <li><strong>Guest Checkout:</strong> Always offer a guest checkout option</li>
+                                <li><strong>Progress Indicator:</strong> Show clear steps in the checkout process</li>
+                                <li><strong>Form Optimization:</strong> Minimize form fields and use autocomplete</li>
+                                <li><strong>Mobile-Friendly:</strong> Ensure smooth experience on mobile devices</li>
+                                <li><strong>Validation:</strong> Provide real-time form validation and helpful error messages</li>
+                                <li><strong>Security Indicators:</strong> Display trust badges and security information</li>
+                                <li><strong>Order Review:</strong> Let customers review their order before payment</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="checkout-steps">
+                                <div class="row text-center">
+                                    <div class="col">
+                                        <div class="step active">
+                                            <div class="step-icon rounded-circle mb-2">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </div>
+                                            <h6>Cart</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="step-connector active"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="step active">
+                                            <div class="step-icon rounded-circle mb-2">
+                                                <i class="fas fa-address-card"></i>
+                                            </div>
+                                            <h6>Information</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="step-connector"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="step">
+                                            <div class="step-icon rounded-circle mb-2">
+                                                <i class="fas fa-truck"></i>
+                                            </div>
+                                            <h6>Shipping</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="step-connector"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="step">
+                                            <div class="step-icon rounded-circle mb-2">
+                                                <i class="fas fa-credit-card"></i>
+                                            </div>
+                                            <h6>Payment</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-light">
+                                    <h4 class="h6 mb-0">Checkout Form Example</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="code-block">
+<pre><code class="language-html">&lt;!-- Checkout Information Form -->
+&lt;form id="checkoutForm" class="needs-validation" novalidate>
+  &lt;h5 class="mb-3">Contact Information&lt;/h5>
+  &lt;div class="row g-3 mb-4
